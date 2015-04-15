@@ -70,7 +70,7 @@ Each lobby-uploader source needs to have a job defined for it, so we know what t
 The contents of each job should be pretty simple; each job needs to export a function, that is passed an options
 object when it's called. The job should return without throwing any exceptions to indicate success.
 The job should throw an `Error` with an appropriate message describing the failure, to indicate a failure.
-Each job will be run as configured in global (CRON_INTERVAL key) or if overriden in `<job_name>.[json|yml|yaml|js]`.
+Each job will be run as configured in global (`CRON_INTERVAL` key) or if overriden in `<job_name>.[json|yml|yaml|js]`.
 
 Here's an example job:
 ```
@@ -78,11 +78,11 @@ var request = require('request');
 module.exports = function(opts) {
 	// get a cat pic
 	request.get("https://farm7.staticflickr.com/6100/6303228181_59371c29dc_q_d.jpg", function(e, r, b) {
-		if (e || r.statusCode != 200) throw new Error("failed to get image");
+		if (e || r.statusCode != 200) opts.error("failed to get image");
 
 		// upload it to s3
 		opts.s3.upload({Bucket: opts.bucket, body: b}, function(e) {
-			if (e) throw new Error("failed to upload to s3");
+			if (e) opts.error("failed to upload to s3");
 		});
 	});
 };
