@@ -110,6 +110,12 @@ __Type:__ Number.
 __Purpose:__ The interval (in ms) that this job is run at. If it's running right now, you'll know it'll run again in this long.  
 __Details:__ Useful if your job needs to be aware of how often its configured to run.
 
+### [error]
+
+__Type:__ Function.  
+__Purpose:__ This function should be passed an error, if your job needs to fail asynchronously.  
+__Details:__ Use this to fail asynchronously. If your job fails synchronously, you can simply throw the error instead.
+
 # License
 
 Licensed under the [MIT License](./LICENSE)
