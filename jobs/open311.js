@@ -2,7 +2,7 @@ var request = require('request');
 
 module.exports = function(opts) {
 	
-	// get a cat pic
+	// get 311 data for boston
 	request.get("https://mayors24.cityofboston.gov/open311/v2/requests.json?extensions=v1&status=open", function(e, r, b) {
 		if (e || r.statusCode != 200) return opts.error("failed to get open311 data");
 
