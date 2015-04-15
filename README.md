@@ -106,8 +106,8 @@ __Details:__ Used to tell a job which bucket to interact with. Note that we can'
 
 ### [interval]
 
-__Type:__ Number.  
-__Purpose:__ The interval (in ms) that this job is run at. If it's running right now, you'll know it'll run again in this long.  
+__Type:__ String.  
+__Purpose:__ The cron interval that this job is run at. 
 __Details:__ Useful if your job needs to be aware of how often its configured to run.
 
 ### [error]
