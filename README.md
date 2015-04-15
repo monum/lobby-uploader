@@ -1,6 +1,8 @@
 lobby-uploader
 ===============
 
+> This branch of the project is for specific monum use only! If you're looking to fork, fork master.
+
 > __This module is still under construction!__ Not yet ready for prime time.
 
 This node module is responsible for querying data from various sources and uploading it to s3.
