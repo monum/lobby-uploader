@@ -1,0 +1,27 @@
+{
+  "name": "lobby-uploader",
+  "version": "0.0.1",
+  "description": "Runs jobs to upload data to s3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "s3",
+    "job",
+    "runner"
+  ],
+  "author": "Ben Greenier",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1.23",
+    "bunyan": "^1.3.5",
+    "cron": "^1.0.9",
+    "forever-monitor": "^1.5.2",
+    "hulksmash": "0.0.3",
+    "lconf": "0.0.5",
+    "request": "^2.55.0",
+    "uuid": "^2.0.1"
+  }
+}
