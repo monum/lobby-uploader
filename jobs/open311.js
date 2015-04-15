@@ -12,7 +12,13 @@ module.exports = function(opts) {
 		// do some processing on o
 
 		// upload o to s3
-		opts.s3.upload({Bucket: opts.bucket, Body: JSON.stringify(o), Key: "open311-latest.json"}, function(e) {
+		opts.s3.upload({
+			Bucket: opts.bucket,
+			Body: JSON.stringify(o),
+			Key: "open311-latest.json",
+			ACL: "public-read",
+			ContentType: "application/json"
+		}, function(e) {
 			if (e) opts.error(e); //for handling of async errors
 		});
 	});
