@@ -36,7 +36,7 @@ Here's a good default:
 	"BUCKET": "testing",
 	"VERBOSE": true,
 	"FOREVER": true,
-	"CRON_INTERVAL": "00 30 11 * * 1-5"
+	"CRON_INTERVAL": "*/5 * * * *"
 }
 ```
 
@@ -56,7 +56,7 @@ Here's an example with overrides:
 {
 	"VERBOSE": false,
 	"FOREVER": true,
-	"CRON_INTERVAL": "00 30 11 * * 1-2",
+	"CRON_INTERVAL": "*/10 * * * *",
 	"BUCKET": "my-bucket"
 }
 ```

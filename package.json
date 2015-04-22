@@ -20,7 +20,9 @@
     "cron": "^1.0.9",
     "forever-monitor": "^1.5.2",
     "hulksmash": "0.0.3",
+    "ical": "^0.4.0",
     "lconf": "0.0.5",
+    "promise": "^7.0.1",
     "request": "^2.55.0",
     "uuid": "^2.0.1"
   }
